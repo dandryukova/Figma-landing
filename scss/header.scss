@@ -1,0 +1,126 @@
+.container {
+    width: 1400px;
+    margin: 0 auto;
+    background: #f9fbff;
+
+    > div,
+    header {
+        z-index: 1;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    height: 768px;
+    width: 100%;
+    margin-bottom: 87px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        width: 688/1400 * 100%;
+        background: url(./../img/banner-img.png) no-repeat;
+        background-position: center;
+        z-index: -1;
+    }
+
+    &__title {
+        position: absolute;
+        top: 76px;
+        left: 137px;
+    }
+
+    &__subtitle {
+        position: absolute;
+        top: 504px;
+        left: 130px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 54px;
+        line-height: 70px;
+        color: #415167;
+        text-transform: uppercase;
+
+        &--highlight {
+            color: white;
+            background: #c7a17a;
+            padding: 0 15px;
+        }
+    }
+
+    &-menu {
+        display: flex;
+        flex-direction: column;
+        min-width: 329px;
+        background: #415167;
+        position: relative;
+
+        &__cart {
+            position: absolute;
+            top: 86px;
+            left: 55.84px;
+        }
+
+        .product-amount {
+            position: absolute;
+            top: 64px;
+            left: 80px;
+            z-index: 10;
+        }
+
+        &__links {
+            padding: 230px 0 0 22px;
+
+            ul li {
+                list-style-type: none;
+                padding-bottom: 20px;
+
+                .link--bold {
+                    font-weight: 700;
+                }
+            }
+
+            a {
+                color: #edf0f5;
+                font-family: "Nunito";
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24px;
+                text-transform: uppercase;
+                transition: color 0.5s ease-in-out;
+
+                &:visited {
+                    text-decoration: none;
+                    color: #edf0f5;
+
+                    &:hover {
+                        color: darken($color: #edf0f5, $amount: 40);
+                    }
+                }
+            }
+        }
+    }
+
+    button {
+        background: none;
+        border: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+    }
+}

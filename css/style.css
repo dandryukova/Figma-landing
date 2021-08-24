@@ -1,0 +1,135 @@
+body {
+  width: 1400px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  position: relative;
+  height: 768px;
+  width: 100%;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-46%);
+          transform: translateX(-46%);
+  height: 100%;
+  width: 49.14286%;
+  background: url(./../img/banner-img.png) no-repeat;
+  background-position: center;
+  z-index: -1;
+}
+
+.header__title {
+  position: absolute;
+  top: 76px;
+  left: 137px;
+}
+
+.header__subtitle {
+  position: absolute;
+  top: 504px;
+  left: 130px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 54px;
+  line-height: 70px;
+  color: #415167;
+  text-transform: uppercase;
+}
+
+.header__subtitle--highlight {
+  color: white;
+  background: #c7a17a;
+  padding: 0 15px;
+}
+
+.header-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-width: 329px;
+  background: #415167;
+  position: relative;
+}
+
+.header-menu__cart {
+  position: absolute;
+  top: 86px;
+  left: 55.84px;
+}
+
+.header-menu .product-amount {
+  position: absolute;
+  top: 64px;
+  left: 80px;
+  z-index: 10;
+}
+
+.header-menu__links {
+  padding: 230px 0 0 22px;
+}
+
+.header-menu__links ul li {
+  list-style-type: none;
+  padding-bottom: 20px;
+}
+
+.header-menu__links ul li .link--bold {
+  font-weight: 700;
+}
+
+.header-menu__links a {
+  color: #edf0f5;
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  -webkit-transition: color 0.5s ease-in-out;
+  transition: color 0.5s ease-in-out;
+}
+
+.header-menu__links a:visited {
+  text-decoration: none;
+  color: #edf0f5;
+}
+
+.header-menu__links a:visited:hover {
+  color: #6a83ac;
+}
+
+.header button {
+  background: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(-10%, -50%);
+          transform: translate(-10%, -50%);
+  left: 50%;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */
